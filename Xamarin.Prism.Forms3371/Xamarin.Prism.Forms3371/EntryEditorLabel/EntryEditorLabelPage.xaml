@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.Prism.Forms3371.EntryEditorLabel.EntryEditorLabelPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Entry Placeholder="CapitalizeNone" PlaceholderColor="Yellow" HeightRequest="40">
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>CapitalizeNone</KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+                <Entry Placeholder="CapitalizeCharacter" PlaceholderColor="Yellow" HeightRequest="40">
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>CapitalizeCharacter</KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+                <Entry Placeholder="Send" PlaceholderColor="Yellow" HeightRequest="40" ReturnType="Send" />
+                <Entry Placeholder="Search" PlaceholderColor="Black" HeightRequest="40" ReturnType="Search" />
+                <Entry Placeholder="Done" PlaceholderColor="Red" HeightRequest="40" ReturnType="Done" />
+                <Entry Placeholder="No Prediction" PlaceholderColor="Yellow" HeightRequest="40" IsTextPredictionEnabled="False" />
+                <Editor Placeholder="Autosize Editor" PlaceholderColor="Yellow" AutoSize="TextChanges" />
+                <Label Text="This text is underlined" TextDecorations="Underline" />
+                <Label Text="This text is striked-through" TextDecorations="Strikethrough" />
+                <Label MaxLines="3" LineBreakMode="TailTruncation" Text="This is a very long text to display MaxLines on Labels. This is usefull for 'Read More'-scenarios so just some lorem ipsum: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis quam non enim pellentesque, ut placerat purus finibus. Nulla quis tincidunt ante. Ut mauris lectus, aliquam a sagittis vitae, consequat eget elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque convallis nunc nisi, a imperdiet elit efficitur et. Duis in lectus mollis, interdum ipsum et, tincidunt orci. Fusce ipsum metus, imperdiet non lacus vitae, facilisis feugiat magna. Nulla volutpat nisl tortor, a consectetur felis consectetur non. Curabitur in enim vulputate sem volutpat bibendum id nec lorem. Mauris laoreet lacus ac volutpat tempus." />
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Here you " />
+                            <Span Text="can" TextDecorations="Underline" />
+                            <Span Text=" " />
+                            <Span Text="see some " />
+                            <Span Text="mixed" TextDecorations="Strikethrough" />
+                            <Span Text="formatted Text." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

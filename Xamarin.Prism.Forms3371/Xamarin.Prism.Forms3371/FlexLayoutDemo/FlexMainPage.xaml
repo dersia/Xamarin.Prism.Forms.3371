@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin.Prism.Forms3371"
+             xmlns:nav="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Xamarin.Prism.Forms3371.FlexLayoutDemo.FlexMainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Button Text="Go To Basis Experiment" Command="{nav:NavigateTo 'BasisExperimentPage'}" />
+        <Button Text="Go To Catalog Items" Command="{Binding NavigationCommand}" CommandParameter="CatalogItemsPage" />
+        <Button Text="Go To Experiment" Command="{nav:NavigateTo 'ExperimentPage'}" />
+        <Button Text="Go Back" Command="{nav:GoBack}" />
+
+    </StackLayout>
+
+</ContentPage>

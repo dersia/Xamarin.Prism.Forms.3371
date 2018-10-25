@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Xamarin.Prism.Forms3371.NavigationDemo.NavigationDemoStartPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Go Deep!" Command="{Binding NavigateToCommand}" CommandParameter="CustomTitleBarPage/EntryEditorLabelPage/BasisExperimentPage/FlexMainPage/NavigationDemoPrePage/NavigationDemoPage" />
+            <Button Text="Go Deep2!" Command="{Binding NavigateToCommand}" CommandParameter="CustomTitleBarPage/EntryEditorLabelPage/BasisExperimentPage/NavigationDemoPrePage/FlexMainPage/NavigationDemoPage" />
+            <Button Text="Go Deep3!" Command="{Binding NavigateToCommand}" CommandParameter="CustomTitleBarPage/EntryEditorLabelPage/NavigationDemoPrePage/BasisExperimentPage/FlexMainPage/NavigationDemoPage" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

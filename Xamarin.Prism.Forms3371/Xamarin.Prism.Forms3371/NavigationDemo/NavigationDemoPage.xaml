@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:nav="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Xamarin.Prism.Forms3371.NavigationDemo.NavigationDemoPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Path: " />
+                <Label Text="{Binding NavigationPath}" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Button Text="Go Back" Command="{nav:GoBack}" />
+                <Button Text="Go Back 2" Command="{nav:NavigateTo '../../'}" />
+                <Button Text="Go Back 3 and populate" Command="{nav:NavigateTo '../../../NavigationDemoPage'}" />
+                <Button Text="Go Back To Root" Command="{nav:GoBack ToRoot}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:nav="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             x:Class="Xamarin.Prism.Forms3371.PartialViewDemo.PartialViewDemoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Go To ParentA" Command="{nav:NavigateTo 'PartialParentA'}" />
+            <Button Text="Go To ParentB" Command="{nav:NavigateTo 'PartialParentB'}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

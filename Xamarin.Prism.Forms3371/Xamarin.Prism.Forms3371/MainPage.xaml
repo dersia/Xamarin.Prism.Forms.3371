@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:nav="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             x:Class="Xamarin.Prism.Forms3371.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Button Text="Go To VSM Demo" Command="{nav:NavigateTo 'VSMDemo'}" />
+        <Button Text="Go To Flex Demo" Command="{nav:NavigateTo 'FlexMainPage'}" />
+        <Button Text="Go To Css Demo" Command="{nav:NavigateTo 'CssCatalogItemsPage'}" />
+        <Button Text="Go To Tabbed Page" Command="{nav:NavigateTo 'TabbedAndroidPage'}" />
+        <Button Text="Go To Editor Entry Page" Command="{nav:NavigateTo 'EntryEditorLabelPage'}" />
+        <Button Text="Go To Custom Title Bar Page" Command="{nav:NavigateTo 'CustomTitleBarPage'}" />
+        <Button Text="Go To Content Provider Demo" Command="{nav:NavigateTo 'ContentProviderDemoPage'}" />
+        <Button Text="Go To PartialView Demo" Command="{nav:NavigateTo 'PartialViewDemoPage'}" />
+        <Button Text="Go To Navigation Demo" Command="{nav:NavigateTo 'NavigationDemoStartPage'}" />
+
+    </StackLayout>
+
+</ContentPage>

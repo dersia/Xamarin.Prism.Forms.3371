@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ioc="clr-namespace:Prism.Ioc;assembly=Prism.Forms"
+             xmlns:converters="clr-namespace:Xamarin.Prism.Forms3371.Converter"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Xamarin.Prism.Forms3371.ContentProvider.ContentProviderDemoPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ioc:ContainerProvider x:TypeArguments="converters:LookupConverter" x:Key="LookupConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding Entry1, Converter={StaticResource LookupConverter}}" />
+                        <Span Text="{Binding Entry2, Converter={StaticResource LookupConverter}}" />
+                        <Span Text="{Binding Entry3, Converter={StaticResource LookupConverter}}" />
+                        <Span Text="{Binding Entry4, Converter={StaticResource LookupConverter}}" />
+                        <Span Text="{Binding Entry5, Converter={StaticResource LookupConverter}}" />
+                        <Span Text="{Binding Entry6, Converter={StaticResource LookupConverter}}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
